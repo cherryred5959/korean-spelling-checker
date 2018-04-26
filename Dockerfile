@@ -1,7 +1,7 @@
-FROM php:7.2.1-cli-stretch
+FROM php:7.2.1-cli
 
 ENV php_version=7.2.1
-ENV composer_version=1.5.6
+ENV composer_version=1.6.2
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 RUN tar x --file=/usr/src/php.tar.xz --directory=/usr/src/  php-$php_version/php.ini-production php-$php_version/php.ini-development

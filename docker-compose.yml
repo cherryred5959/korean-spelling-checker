@@ -2,6 +2,8 @@ version: '3.4'
 
 services:
   php:
+   env_file:
+     - .env
    build:
      context: .
      dockerfile: Dockerfile
@@ -11,4 +13,4 @@ services:
    volumes:
      - .:/var/www/html
    ports:
-     - 8000:80
+     - ${port}:80
